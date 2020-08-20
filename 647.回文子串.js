@@ -40,6 +40,7 @@
 // 3，dp[i][j] = dp[i][j-2] && s[i + Math.ceil((j-1)/2)] ==s [ i- Math.floor((j-1)/2)];
 
 // 然后统计dp[i][j] 为真 的数量并返回即可。
+// 
 
 var countSubstrings = function(s) {
     let result = 0
