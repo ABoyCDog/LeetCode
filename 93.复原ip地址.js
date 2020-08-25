@@ -11,6 +11,7 @@
  */
 var restoreIpAddresses = function(s) {
     let res = []
+    if(s.length > 12) return res
 
     const dfs = (subRes, start) => {                        // 复原从start开始的子串
         if(subRes.length === 4 && start === s.length) {     // 用满四个段且start移到了最后一位，即用完了字符串
