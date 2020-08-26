@@ -30,7 +30,7 @@ var restoreIpAddresses = function(s) {
 
             subRes.push(str)                                // 选择
             dfs(subRes, start + len)                        // 基于这种选择向下遍历
-            subRes.popp()                                   // 撤销最后的选择，回到之前的状态
+            subRes.pop()                                   // 撤销最后的选择，回到之前的状态
         }
     }
 
