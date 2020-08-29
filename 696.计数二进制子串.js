@@ -10,13 +10,13 @@
  * @return {number}
  */
 var countBinarySubstrings = function(s) {
-    let result = 0
+    let res = 0
     let len = s.length
-    let curr
+    let cur = []
     if(len = 1) return result
-    for(let i = 0; i < len; i++) {
+    for(let i = 0; i < len; i++) {}
 
-    }
+    return res
 };
 // @lc code=end
 
