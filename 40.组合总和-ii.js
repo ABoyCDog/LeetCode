@@ -11,7 +11,8 @@
  * @return {number[][]}
  */
 var combinationSum2 = function(candidates, target) {
-
+    const res = []
+    
 };
 // @lc code=end
 
