@@ -10,25 +10,53 @@
  * @param {number} k
  * @return {string}
  */
-var getPermutation = function(n, k) {
-    const res = []
-    const nums = Array.from(Array(n), (i,j)=>k)
+// 运行全部用例会超时
+// var getPermutation = function(n, k) {
+//     let res = []
+//     let curr = []
+//     const nums = Array.from(Array(n), (i,j)=>j+1)
 
-    function dfs(arr) {
-        if(arr.length === n) {
-            res.push(arr)
-            return
+//     dfs(nums, n, k, curr, res)
+//     return res[k-1].join('')
+// };
+// function dfs(nums, n, targetk, curr, res) {
+//     if(curr.length === n) {
+//         res.push(curr)
+//         return
+//     }
+//     for(let i = 0; i < n; i++) {
+//         if(!curr.includes(nums[i])) {
+//             curr.push(nums[i])
+//             dfs(nums, n, targetk, curr.slice(), res)
+//             curr.pop()
+//         }
+//     }
+// }
+
+// try again
+var getPermutation = function(n, k) {
+    let res = [0, undefined]
+    let curr = []
+    const nums = Array.from(Array(n), (i,j)=>j+1)
+
+    dfs(nums, k, curr, res)
+    return res[1].join('')
+};
+function dfs(nums, targetk, curr, res) {
+    if(curr.length === nums.length) {
+        if(++res[0] === targetk) {
+            res[1] = curr.slice()
         }
-        for(let i = 0; i < n; i++) {
-            if(!arr.includes(nums[i])) {
-                arr.push(nums[i])
-                dfs(arr.slice())
-                arr.pop()
-            }
+        return
+    }
+    for(let i = 0; i < nums.length; i++) {
+        if(!curr.includes(nums[i])) {
+            curr.push(nums[i])
+            dfs(nums, targetk, curr.slice(), res)
+            curr.pop()
         }
     }
-    dfs([])
-    return res[k-1].join('')
-};
+}
+
 // @lc code=end
 
