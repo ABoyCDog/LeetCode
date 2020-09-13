@@ -32,10 +32,31 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
+// 普通循环
+// var subsets = function(nums) {
+//     var res=[[]]
+//     for(let i=0;i<nums.length;++i){
+//         for(let j=0,len=res.length;j<len;++j){
+//             res.push(res[j].concat(nums[i]))
+//         }
+//     }
+//     return res;
+// };
+
+// 回溯
 var subsets = function(nums) {
     const res = []
-    backtrack(nums, res)
+    backtrack(nums, res, 0, [])
+    return res
 };
-function backtrack(nums, res) {}
+function backtrack(nums, res, pr, temp) {
+    res.push([...temp])
+    if(temp.length >= nums.length) return
+    for(let i = pr; i < nums.length; i++) {
+        temp.push(nums[i])
+        backtrack(nums, res, i+1, temp)
+        temp.pop()
+    }
+};
 // @lc code=end
 
