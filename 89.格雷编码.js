@@ -76,8 +76,9 @@
 
 //   return res
 // };
+// 
 
-// 题解 极简递归
+// 题解 极简递归 思路清奇
 var grayCode = function(n) {
   if (n === 0) return [0]
   const codes = grayCode(--n)
