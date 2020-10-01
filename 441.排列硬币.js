@@ -46,5 +46,16 @@ var arrangeCoins = function(n) {
     if(num <= i) return i
   }
 };
+// var arrangeCoins = function(n) {
+//   var i = 1
+//   while (true) {
+//     if((1+i)*i/2 > n){
+//       return i - 1
+//     }
+//     i++
+//   }
+//   return parseInt(Math.sqrt(2*n + 1/4) - 1/2)
+// };
+
 // @lc code=end
 
