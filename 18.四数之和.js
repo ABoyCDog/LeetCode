@@ -28,8 +28,8 @@
  * @return {number[][]}
  */
 var fourSum = function(nums, target) {
-  let result = [];
-  let path=[];
+  const result = []
+  let path=[]
   nums.sort((a, b) => a - b)
   function backtrace(start) {
       if(path.length === 4) {
@@ -47,8 +47,8 @@ var fourSum = function(nums, target) {
           path.pop()
       }
   }
-  backtrace( 0)
-  return result;
-};
+  backtrace(0)
+  return result
+}
 // @lc code=end
 
