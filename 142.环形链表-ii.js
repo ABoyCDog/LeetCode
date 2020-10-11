@@ -53,15 +53,15 @@
  */
 // 哈希表，遍历全部节点，如果有某个遍历过的节点，那么一定是存在环
 var detectCycle = function(head) {
-  const visited = new Set();
+  const visited = new Set()
   while (head !== null) {
       if (visited.has(head)) {
-          return head;
+          return head
       }
-      visited.add(head);
-      head = head.next;
+      visited.add(head)
+      head = head.next
   }
-  return null;
-};
+  return null
+}
 // @lc code=end
 
