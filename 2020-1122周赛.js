@@ -1,4 +1,5 @@
-// 第一题：检查两个字符串数组是否相等
+// 第一题
+// 检查两个字符串数组是否相等
 /**
  * @param {string[]} word1
  * @param {string[]} word2
@@ -13,6 +14,8 @@ var arrayStringsAreEqual = function(word1, word2) {
 };
 
 // 第二题
+// 具有给定数值的最小字符串
+// https://leetcode-cn.com/problems/smallest-string-with-a-given-numeric-value/
 // 结果：超时
 /**
  * @param {number} n
@@ -58,3 +61,12 @@ var combinationSum = function(candidates, target, nn) {
     dfs([], 0)
     return res
 };
+
+// 第三题
+// 生成平衡数组的方案数
+// https://leetcode-cn.com/problems/ways-to-make-a-fair-array/
+
+
+// 第四题
+// 完成所有任务的最少初始能量
+// https://leetcode-cn.com/problems/minimum-initial-energy-to-finish-tasks/
